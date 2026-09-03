@@ -69,3 +69,134 @@
   color: #f87171;
   font-size: 0.85rem;
 }
+.watchlist-page {
+  padding: 2.5rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.watchlist-heading {
+  color: #f1f5f9;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.empty-text {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.watchlist-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  position: relative;
+}
+
+.watchlist-avatar {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background-color: #1f4e5f;
+  color: #e2f4f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.watchlist-info {
+  flex: 1;
+}
+
+.watchlist-name {
+  color: #f1f5f9;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.watchlist-badge {
+  display: inline-block;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+}
+
+.watchlist-notes {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin: 0.3rem 0 0;
+  line-height: 1.3;
+}
+
+.delete-btn {
+  background-color: transparent !important;
+  color: #f87171 !important;
+  border: 1px solid #7f1d1d !important;
+  padding: 0.3rem 0.6rem !important;
+  font-size: 0.72rem !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.delete-btn:hover {
+  background-color: #7f1d1d !important;
+  color: white !important;
+}
+.watchlist-form-wrapper {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+.watchlist-form-wrapper h1 {
+  color: #f1f5f9;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+.watchlist-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.edit-btn {
+  background-color: transparent !important;
+  color: #38bdf8 !important;
+  border: 1px solid #0369a1 !important;
+  padding: 0.3rem 0.6rem !important;
+  font-size: 0.72rem !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0369a1 !important;
+  color: white !important;
+}
+
+.cancel-btn {
+  background-color: transparent !important;
+  color: #94a3b8 !important;
+  border: 1px solid #334155 !important;
+  margin-top: 0.5rem !important;
+}
