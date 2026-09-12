@@ -3,6 +3,7 @@ import Signup from './pages/signup.jsx'
 import Login from './pages/login.jsx'
 import Watchlist  from './pages/watchlist.jsx'
 import Dashboard from './pages/Dashboard'
+import History from './pages/History'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </BrowserRouter>
   )

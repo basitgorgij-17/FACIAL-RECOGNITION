@@ -38,6 +38,16 @@ function Watchlist() {
     setEditingId(null);
   }
 
+  async function logAction(action, targetId) {
+  const { data: { user } } = await supabase.auth.getUser()
+
+  await supabase.from('audit_logs').insert({
+    user_id: user.id,
+    action: action,
+    target_id: targetId,
+  })
+}
+
   // Edit button click hone par form ko pre-fill karta hai
   function handleEditClick(person) {
     console.log('Edit Clicked For: ', person.id, person.name);
@@ -95,6 +105,8 @@ function Watchlist() {
           .insert({ person_id: editingId, image_path: filePath });
       }
 
+      await logAction('Updated watchlist person', editingId)
+      
       setSuccessMsg("Person updated successfully!");
     } else {
 
@@ -128,6 +140,8 @@ function Watchlist() {
           .from("reference_photos")
           .insert({ person_id: personData.id, image_path: filePath });
       }
+
+      await logAction('Added watchlist person', personData.id)
 
       setSuccessMsg("Person added successfully!");
     }
@@ -164,7 +178,8 @@ function Watchlist() {
     }
   }
 
-  // Step 3: Person ki row delete karo (reference_photos row cascade se khud delete ho jayegi)
+  await logAction('Deleted watchlist person', id)   // 👈 ye naya add hua, delete se PEHLE
+
   const { error } = await supabase.from('watchlist_persons').delete().eq('id', id)
 
   if (error) {
